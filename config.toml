@@ -2,3 +2,8 @@ baseURL = "https://mrvegetablehead.com/"
 languageCode = "en-us"
 title = "Mr. Vegetable Head's Wild Ride"
 theme = "hello-friend-ng"
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true
