@@ -1,9 +1,73 @@
 baseURL = "https://mrvegetablehead.com/"
 languageCode = "en-us"
-title = "Mr. Vegetable Head's Wild Ride"
+title = "Sean Laurent"
 theme = "hello-friend-ng"
 
+paginate  = 10
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+enableRobotsTXT = true
+enableEmoji     = true
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Sean Laurent"
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "Tinker // Software Engineer // Hiker // Spy"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  #
+  disableReadOtherPosts = false
+
+  # Sharing buttons
+  #
+  # There are a lot of buttons preconfigured. If you want to change them,
+  # generate the buttons here: https://sharingbuttons.io
+  # and add them into your own `layouts/partials/sharing-buttons.html`
+  #
+  enableSharingButtons = true
+
+ [params.logo]
+    logoMark     = ">"
+    logoText     = "$ rm -fR *"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    # logoCursorColor    = "#67a2c9"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    logoCursorAnimate  = "2s"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
+
 [markup]
-	[markup.goldmark]
-		[markup.goldmark.renderer]
-			unsafe = true
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
